@@ -93,7 +93,7 @@ void klogMesg(int level, char *file,int line,const char *fmt, ...);
 #define klogError(...) klogMesg(KLOG_ERROR,__FILE__,__LINE__,__VA_ARGS__);
 #define klogFatal(...) klogMesg(KLOG_FATAL,__FILE__,__LINE__,__VA_ARGS__);
 
-void test_it();
+void test_log();
 
 
 #ifdef __cplusplus

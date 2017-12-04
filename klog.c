@@ -12,7 +12,7 @@
 typedef struct Klog{
     const char* logpath;//存储地址
     int fd;//文件句柄
-    ULONG flag;//存储位置
+    ULONG flag;//日志发送的地方
     char splite_char[5];//分隔符
     short is_show_line;//是否显示行+文件名,默认不显示
     
@@ -168,7 +168,7 @@ void klogMesg(int level, char *file,int line,const char *fmt, ...){
 
 
 
-void test_it(){
+void test_log(){
     printf("test it\n");
     int ret;
     
