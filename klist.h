@@ -9,13 +9,7 @@
 #ifndef __mylib__klist__
 #define __mylib__klist__
 
-#include <stdio.h>
-#include <stdlib.h>
-
-//比较函数
-typedef int ( * link_compare_func ) ( void *, void * );
-//回调函数
-typedef void ( *link_call_back_func ) ( void * );
+#include "kheader.h"
 
 typedef struct _LinkNode {
     void *value;

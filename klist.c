@@ -68,15 +68,22 @@ void link_node_free(LinkNode *node,link_call_back_func func){
 int link_destroy(LinkList *link,link_call_back_func free_func){
     LinkNode *node;
     if (link != NULL) {
-        for (node=link->head; node!=link->tail; node = node->next) {
-            if (free_func != NULL) {
-                free_func(node->value);
+        if (link->size > 0) {
+            for (node=link->head; node!=link->tail; node = node->next) {
+                if (free_func != NULL && node->value != NULL) {
+                    free_func(node->value);
+                }
+                free(node);
+                printf("%p,",node);
             }
-            free(node);
         }
-        free(link->head);
+        
+        //free(link->head);
         link->head = NULL;
         
+        if(free_func != NULL){
+            free_func(link->tail->value);
+        }
         free(link->tail);
         link->tail = NULL;
     }
