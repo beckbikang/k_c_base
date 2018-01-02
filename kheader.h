@@ -21,6 +21,10 @@ typedef int ( * link_compare_func ) ( void *, void * );
 //回调函数
 typedef void ( *link_call_back_func ) ( void * );
 
-
+//定义unsigned int
+typedef  unsigned int kuint;
+typedef unsigned long kulong;
+//定义char*
+typedef char *                      cstr;
 
 #endif

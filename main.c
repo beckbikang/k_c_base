@@ -25,6 +25,8 @@
 #include "kprime.h"
 #include "ksort.h"
 
+#include "kstring.h"
+
 struct data{
     int a;
 };
@@ -68,6 +70,7 @@ void test_stack();//测试stack
 void test_queue();//测试队列
 void test_primer();//测试素数
 void test_sort();//测试排序
+void test_string();//测试string操作
 
 void printLink2(LinkList* link){
     int i;
@@ -95,8 +98,21 @@ int main(int argc, const char * argv[]) {
     //test_stack();
     //test_queue();
     //test_primer();
-    test_sort();
+    //test_sort();
+    test_string();
     return 0;
+}
+
+//测试string的基本操作
+void test_string(){
+    
+    char *astr = "hi c base";
+    kstr *s1;
+    s1 = kstr_create(astr);
+    printf("str_le=%d,str=%s",s1->len,s1->str);
+    kstr_free(&s1);
+    
+    
 }
 
 //测试排序

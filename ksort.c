@@ -9,7 +9,6 @@
 #include "ksort.h"
 
 //直接使用指针实现
-
 void k_subinsert_sort(void *a,uint size,link_compare_func comp,uint start,uint end){
     
     char *tmp = (char*)malloc(size);

@@ -34,7 +34,7 @@ typedef struct _kmempool{
     
     unsigned int block_size;//每个block的大小
     unsigned int block_count;//block的数量
-    unsigned int add_step;
+    unsigned int add_step;//添加数据的步长
     unsigned int used_count;//使用的数量
     unsigned int free_count;//剩余的数量
 
